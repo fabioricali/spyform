@@ -44,6 +44,32 @@ class SpyForm {
     }
 
     /**
+     * Start watching
+     * @returns {SpyForm}
+     */
+    watch() {
+        this.spyo.watch();
+        return this;
+    }
+
+    /**
+     * Stop watching
+     * @returns {SpyForm}
+     */
+    unwatch() {
+        this.spyo.unwatch();
+        return this;
+    }
+
+    /**
+     * Detect if check is active
+     * @returns {boolean}
+     */
+    isWatching() {
+        return this.spyo.isWatching();
+    }
+
+    /**
      * Extract form data
      * @param el {string} query selector
      * @returns {{}}
